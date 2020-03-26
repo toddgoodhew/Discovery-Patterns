@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2020-03-26 20:17:50">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>PatternExport 2020-03-26 20:17:48</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value="PatternExport 2020-03-26 20:17:48">73a7a1e910bf0c107f448165e4e08263</remote_base_update_set>
+<remote_parent_id/>
+<remote_sys_id>bfa7a1e910bf0c107f448165e4e08235</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 20:17:48</sys_created_on>
+<sys_id>73a7a1e910bf0c107f448165e4e08263</sys_id>
+<sys_mod_count>1</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 20:17:48</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>discovery_classifier_probe_f0b045e510fb0c107f448165e4e08232</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="discovery_classifier_probe"><discovery_classifier_probe action="INSERT_OR_UPDATE"><active>true</active><child display_value="Horizontal Pattern">4f64c6389f230200fe2ab0aec32e7068</child><classy display_value="MID Server">d9d4b6b410f748107f448165e4e0821a</classy><condition_script/><name>HorizontalDiscoveryProbe-Horizontal Patt</name><pattern display_value="MID Server">cd1ff82510fb0c107f448165e4e08226</pattern><phase>exploration</phase><sys_class_name>discovery_classifier_probe</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-26 17:27:29</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f0b045e510fb0c107f448165e4e08232</sys_id><sys_mod_count>1</sys_mod_count><sys_name>MID Server.Horizontal Pattern</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>discovery_classifier_probe_f0b045e510fb0c107f448165e4e08232</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-26 17:27:35</sys_updated_on></discovery_classifier_probe></record_update>]]></payload>
+<payload_hash>1601453298</payload_hash>
+<remote_update_set display_value="PatternExport 2020-03-26 20:17:48">73a7a1e910bf0c107f448165e4e08263</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 20:17:48</sys_created_on>
+<sys_id>77a7a1e910bf0c107f448165e4e08263</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>171187e651f0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 20:17:48</sys_updated_on>
+<table/>
+<target_name>HorizontalDiscoveryProbe-Horizontal Patt</target_name>
+<type>Classifier Probe</type>
+<update_domain>global</update_domain>
+<update_guid>f3a7a1e998bf0c10933b646672721060</update_guid>
+<update_guid_history>f3a7a1e998bf0c10933b646672721060:1601453298,56b045e52cfb0c10fbe9ec1a1270403b:1601453298,34b045e560fb0c10d4ba4930a6ba3934:-1952275148</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sa_pattern_cd1ff82510fb0c107f448165e4e08226</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sa_pattern"><sa_pattern action="INSERT_OR_UPDATE"><active>true</active><ci_type>cmdb_ci_appl_now_mid</ci_type><cpattern_type>1</cpattern_type><description/><directory>false</directory><enforce_proc_classy>false</enforce_proc_classy><invoke_per_account>false</invoke_per_account><metadata_id>cd1ff82510fb0c107f448165e4e08226</metadata_id><name>MID Server</name><ndl>pattern {&#13;
+	metadata {&#13;
+		id = "cd1ff82510fb0c107f448165e4e08226"&#13;
+		name = "MID Server"&#13;
+		description = ""&#13;
+		citype = "cmdb_ci_appl_now_mid"&#13;
+	}&#13;
+	identification {&#13;
+		name = "Discovery"&#13;
+		entry_point {type = "*"}&#13;
+		find_process_strategy {strategy = LISTENING_PORT}&#13;
+		step {&#13;
+			name = "Match Executable Path"&#13;
+			match {&#13;
+				contains {&#13;
+					get_attr {"process.executablePath"}&#13;
+					"agent"&#13;
+				}&#13;
+				terminate_op = graceful&#13;
+				terminate_msg = "Match Not Found"&#13;
+			}&#13;
+		}&#13;
+		step {&#13;
+			name = "Get Install Path"&#13;
+			parse_var_to_var {&#13;
+				from_var_name = "process.executablePath"&#13;
+				to_var_names = table {&#13;
+					name = "exec_path"&#13;
+					col_names = "install_path"&#13;
+				}&#13;
+				parsing_strategy = regex_parsing {regex = "(.*)\\\\bin"}&#13;
+				if_not_found_do = nop {}&#13;
+			}&#13;
+		}&#13;
+		step {&#13;
+			name = "Get MID Server Name"&#13;
+			parse_text_file_to_var {&#13;
+				file_path = get_files_by_filter {&#13;
+					expression = concat {&#13;
+						get_attr {"exec_path[*].install_path"}&#13;
+						"\\config.xml"&#13;
+					}&#13;
+					foreach_attribute_name = "forEach"&#13;
+				}&#13;
+				var_names = table {&#13;
+					name = "exec_path"&#13;
+					col_names = "mid_name"&#13;
+				}&#13;
+				parsing_strategy = regex_parsing {regex = "&lt;parameter name=\"name\" value=\"(.*)\"/&gt;"}&#13;
+				if_not_found_do = nop {}&#13;
+				cache_flag = 0&#13;
+			}&#13;
+		}&#13;
+		step {&#13;
+			name = "Create Unique Name with Host"&#13;
+			transform {&#13;
+				src_table_name = "exec_path"&#13;
+				target_table_name = "cmdb_ci_appl_now_mid"&#13;
+				operation {set_field {&#13;
+						field_name = "name"&#13;
+						value = concat {&#13;
+							get_attr {"exec_path[1].mid_name"}&#13;
+							" on "&#13;
+							get_attr {"computer_system.primaryHostname"}&#13;
+						}&#13;
+					}}&#13;
+			}&#13;
+		}&#13;
+	}&#13;
+}&#13;
+</ndl><parent/><serverless>false</serverless><source/><sys_class_name>sa_pattern</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-26 17:20:23</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cd1ff82510fb0c107f448165e4e08226</sys_id><sys_mod_count>2</sys_mod_count><sys_name>MID Server</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sa_pattern_cd1ff82510fb0c107f448165e4e08226</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-26 20:09:38</sys_updated_on><version/></sa_pattern></record_update>]]></payload>
+<payload_hash>-1826068507</payload_hash>
+<remote_update_set display_value="PatternExport 2020-03-26 20:17:48">73a7a1e910bf0c107f448165e4e08263</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 20:17:48</sys_created_on>
+<sys_id>7fa7a1e910bf0c107f448165e4e08263</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>171187e64fc0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 20:17:48</sys_updated_on>
+<table/>
+<target_name>MID Server</target_name>
+<type>Discovery Patterns</type>
+<update_domain>global</update_domain>
+<update_guid>7fa7a1e973bf0c10e7bef85e3db3a638</update_guid>
+<update_guid_history>7fa7a1e973bf0c10e7bef85e3db3a638:-1826068507,9cd5652970bf0c10907dbd903c76a6bf:-1826068507,f59041e528fb0c10913234fbeeef00e4:1103733361,491ffc2554fb0c10926a72b39439c4ed:382083803</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
